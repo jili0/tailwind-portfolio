@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+  .section-min-height {
+    min-height: calc(100vh - 68px);
+  }
+
+  .paused {
+    animation-play-state: paused;
+  }
+
+
+  .custom_galary:hover {
+    @apply hover:animate-lupe;
+  }
+}
+
+@font-face {
+  font-family: "CinzelDecorative";
+  src: url("../font/Cinzel_Decorative/CinzelDecorative-Bold.ttf");
+}
+
+.element {
+  animation: name duration timing-function delay iteration-count direction fill-mode;
+}
