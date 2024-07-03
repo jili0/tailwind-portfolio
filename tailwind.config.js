@@ -1,12 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./build/**/*.html", "./build/**/*.css", "./build/**/*.js"],
+  content: ["./build/**/*.{html,css,js}"],
   theme: {
     extend: {
-      screens: {
-        widescreen: { raw: "(min-aspect-ratio: 3/2)" },
-        tallscreen: { raw: "(max-aspect-ratio: 13/20)" },
-      },
       animation: {
         scroll: "scroll 50s linear 0s infinite ",
         scale: "scale 50s ease-in-out  0s infinite alternate none",
