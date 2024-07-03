@@ -1060,18 +1060,6 @@ video {
   width: max-content;
 }
 
-.max-w-\[\] {
-  max-width: ;
-}
-
-.max-w-\[20rem\] {
-  max-width: 20rem;
-}
-
-.max-w-\[rem\] {
-  max-width: rem;
-}
-
 .max-w-\[50rem\] {
   max-width: 50rem;
 }
