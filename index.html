@@ -1,11 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="sm:scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" type="image/png" href="./icons/favicon-32x32.png">
-    <script defer src="./js/script.js"></script>
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="icon" type="image/png" href="./src/assets/icons/favicon-32x32.png">
     <title>Jing Li</title>
   </head>
 
@@ -258,7 +257,7 @@
         </div>
         <div
           id="galarie"
-          class="mt-24 grid grid-cols-3 gap-2 justify-items-center items-center p-4 bg-[linear-gradient(to_bottom,rgba(203,213,225,0.8),rgba(0,0,0,0.8)),url('../img/hero.jpg')] bg-contain bg-no-repeat bg-[50%] h-[calc(100vh-2rem)] max-[500px]:h-[50vh] place-content-center rounded-3xl overflow-hidden"
+          class="mt-24 grid grid-cols-3 gap-2 justify-items-center items-center p-4 bg-[linear-gradient(to_bottom,rgba(203,213,225,0.8),rgba(0,0,0,0.8)),url('./src/assets/images/hero.jpg')] bg-contain bg-no-repeat bg-[50%] h-[calc(100vh-2rem)] max-[500px]:h-[50vh] place-content-center rounded-3xl overflow-hidden"
         >
           <img
             class="border-4 border-transparent hover:z-10 hover:border-slate-300 rounded-lg shadow max-h-64 even:w-6/5 odd:w-2/5 [&:nth-child(3n+1)]:animate-shrink [&:nth-child(3n-1)]:animate-scale [&:nth-child(3n)]:animate-wander custom_galary"
@@ -318,7 +317,7 @@
       >
         <h2 class="text-4xl text-center mb-12">About me</h2>
         <img
-          src="img/portrait_laugh.jpg"
+          src="./src/assets/images/portrait_laugh.jpg"
           alt="portrait"
           class="h-40 w-40 mx-auto rounded-full object-cover m-12 ml-20 sm:float-right"
         />
@@ -668,5 +667,6 @@
         Copyright&copy; <span id="yearSpan"></span> . Designed by Jing Li
       </div>
     </footer>
+    <script src="./src/js/script.js"></script>
   </body>
 </html>
