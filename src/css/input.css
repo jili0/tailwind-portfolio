@@ -1,19 +1,112 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
+@theme {
+  --animate-scroll: scroll 50s linear 0s infinite;
+  --animate-scale: scale 50s ease-in-out 0s infinite alternate none;
+  --animate-shrink: shrink 45s linear 0s infinite alternate none;
+  --animate-wander: wander 30s ease-in-out 0s infinite alternate none;
+  --animate-lupe: lupe 0.8s ease 0s 1 normal both;
 
-@layer utilities {
-  .section-min-height {
-    min-height: calc(100vh - 68px);
+  --font-Cinzel-decorative: CinzelDecorative, serif;
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
   }
-
-  .paused {
-    animation-play-state: paused;
+  @keyframes scale {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.4);
+      opacity: 1;
+    }
+    90% {
+      transform: scale(0.9) translate(20%, 20%);
+      opacity: 0.6;
+    }
+    100% {
+      transform: scale(1);
+    }
   }
+  @keyframes shrink {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: translate(10%, -10%);
+    }
+    50% {
+      transform: translate(10%, 10%);
+      opacity: 0.5;
+    }
+    75% {
+      transform: scale(0.6) translate(-10%, 10%);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes wander {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: scale(0.8) translate(-10%, -2%);
+      opacity: 0.3;
+    }
+    50% {
+      transform: translate(5%, 2%);
+    }
+    75% {
+      transform: translate(10%, -2%);
+    }
+    100% {
+      transform: scale(1) translate(0, 0);
+    }
+  }
+  @keyframes lupe {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.5);
+    }
+  }
+}
 
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
 
-  .custom_galary:hover {
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility section-min-height {
+  min-height: calc(100vh - 68px);
+}
+
+@utility paused {
+  animation-play-state: paused;
+}
+
+@utility custom_galary {
+  &:hover {
     @apply hover:animate-lupe;
   }
 }
