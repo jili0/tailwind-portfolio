@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import 'tailwindcss'; 
 
 @theme {
   --animate-scroll: scroll 50s linear 0s infinite;
@@ -6,7 +6,6 @@
   --animate-shrink: shrink 45s linear 0s infinite alternate none;
   --animate-wander: wander 30s ease-in-out 0s infinite alternate none;
   --animate-lupe: lupe 0.8s ease 0s 1 normal both;
-
   --font-Cinzel-decorative: CinzelDecorative, serif;
 
   @keyframes scroll {
